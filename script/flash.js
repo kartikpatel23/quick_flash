@@ -9,7 +9,7 @@ $(function() {
 
   document.addEventListener("resume", resumeApp, false);
 
-  $flashButton = $(".flashButton");
+  $flashButton = $("#flashButton");
 
   function onDeviceready(){
     window.plugins.flashlight.available(function(isAvailable) {  
