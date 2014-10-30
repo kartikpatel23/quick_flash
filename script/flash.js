@@ -47,12 +47,16 @@ $(function() {
   }
 
   function exitApp() {
-    /*try{
+    try{
       navigator.app.exitApp();
-    }catch{*/
+    }catch(e){
+      
+
+    }finally{
       $btn_primary.prop("disabled",true);
       flashOff();
-    //}
+    }
+    
   }
 
   function resumeApp() {  
