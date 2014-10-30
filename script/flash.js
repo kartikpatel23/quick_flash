@@ -9,7 +9,7 @@ $(function() {
 
   document.addEventListener("resume", resumeApp, false);
 
-  $btn_primary = $(".btn-primary");
+  $flashButton = $(".flashButton");
 
   function onDeviceready(){
     window.plugins.flashlight.available(function(isAvailable) {  
@@ -22,8 +22,8 @@ $(function() {
   }  
 
   function flashlight(event){
-    $btn_primary.prop("disabled",true);
-    if($btn_primary.hasClass( "flash-off" )){
+    $flashButton.prop("disabled",true);
+    if($flashButton.hasClass( "flash-off" )){
       flashOff();
     }else{
       flashOn();
@@ -32,17 +32,17 @@ $(function() {
 
   function flashOff(){
     window.plugins.flashlight.switchOff(function(){
-      $btn_primary.addClass("flash-on");
-      $btn_primary.removeClass("flash-off");
-      $btn_primary.prop("disabled",false);
+      $flashButton.addClass("flash-on");
+      $flashButton.removeClass("flash-off");
+      $flashButton.prop("disabled",false);
     });
   } 
 
   function flashOn(){
     window.plugins.flashlight.switchOn(function(){
-      $btn_primary.addClass("flash-off");
-      $btn_primary.removeClass("flash-on");
-      $btn_primary.prop("disabled",false);
+      $flashButton.addClass("flash-off");
+      $flashButton.removeClass("flash-on");
+      $flashButton.prop("disabled",false);
     });
   }
 
@@ -53,18 +53,18 @@ $(function() {
       
 
     }finally{
-      $btn_primary.prop("disabled",true);
+      $flashButton.prop("disabled",true);
       flashOff();
     }
     
   }
 
   function resumeApp() {  
-    $btn_primary.prop("disabled",true);
+    $flashButton.prop("disabled",true);
     flashOn();
   }
 
-  $btn_primary.unbind("click").bind("click", function(e){
+  $flashButton.unbind("click").bind("click", function(e){
     e.preventDefault();
     flashlight();
   });

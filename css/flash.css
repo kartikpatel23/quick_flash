@@ -26,6 +26,25 @@ html, body, [data-role="page"] {
     text-align: center;
 }
 
+body{margin: 0;font-size: 1vh}
+.btn{
+    height: 40vh;
+    width: 90vw;
+    display: block;
+    margin: 5vh auto;
+    font-size: 15vh;
+    border: none;
+    background: rgb(125,126,125); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+    color:#FFF;
+}
+
 /***************** RETINA IMAGES **********/
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     html, body, [data-role="page"] {background-image: url('../images/bg@2.png');}
@@ -38,3 +57,41 @@ html, body, [data-role="page"] {
     .sm_link.sm_pin { background-image: url('../images/icon_pin@2.png'); background-size: 40px 40px; }
     hi.logo { background-image: url('../images/logo@2.png'); background-size: 291px 25px; }
 }
+
+
+
+
+
+
+
+
+
+/**
+* iPad with portrait orientation.
+* /
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+    .#flashButton {
+        height: 1024px;
+    }
+}
+
+/**
+* iPad with landscape orientation.
+* /
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+    #flashButton {
+        height: 768px;
+    }
+}
+
+/**
+* iPhone 5
+* You can also target devices with aspect ratio.
+* /
+@media screen and (device-aspect-ratio: 40/71) {
+    #flashButton {
+        height: 500px;
+    }
+}
+
+*/
