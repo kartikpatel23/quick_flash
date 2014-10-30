@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* Custom CSS Styles */
+html, body, [data-role="page"] {
+    background-color: #e0ded0;
+    background-image: url('../images/bg.png');
+    color: #693C14;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Roboto-Thin", "Roboto Thin", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+[data-role="page"] {
+    min-width: 320px;
+}
+
+/********************* SCREENS **************************/
+[data-role="content"] a[data-role="button"] {
+    background: #6d8d24;
+}
+
+/***/
+[data-role="content"] a[data-role="button"].btn_mini {
+    background: #e9e7dc;
+    text-align: center;
+}
+
+#page_welcome, #page_register p {
+    text-align: center;
+}
+
+/***************** RETINA IMAGES **********/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    html, body, [data-role="page"] {background-image: url('../images/bg@2.png');}
+    .ui-icon-list, .ui-icon-scan, .ui-icon-preferences, .ui-icon-edit, .ui-icon-logout, .icon_user, .ui-li-aside.item_status, .icon_reminder, #alert span, #page_edit .form_date.set_alert .ui-btn .ui-btn-text:before, #page_date .form_date.set_alert .ui-btn .ui-btn-text:before {background-image: url('../images/icon_sprite@2.png'); background-size: 330px 140px;}
+    input#date, input#alert_date, input#alert_time {background-image: url('../images/icon_select@2.png'); background-size: 10px 25px;}
+    .sm_link.sm_fb { background-image: url('../images/icon_fb@2.png'); background-size: 40px 40px; }
+    .sm_link.sm_tw { background-image: url('../images/icon_tw@2.png'); background-size: 49px 40px; }
+    .sm_link.sm_yt { background-image: url('../images/icon_yt@2.png'); background-size: 40px 40px; }
+    .sm_link.sm_gp { background-image: url('../images/icon_gplus@2.png'); background-size: 40px 40px; }
+    .sm_link.sm_pin { background-image: url('../images/icon_pin@2.png'); background-size: 40px 40px; }
+    hi.logo { background-image: url('../images/logo@2.png'); background-size: 291px 25px; }
+}
